@@ -168,7 +168,8 @@
             </p>
 
             <div class="figure">
-                <svg class="venue" viewBox="0 0 600 384" role="img" aria-label="3つの教室と廊下からなる会場の平面図">
+                <svg class="venue" data-scroll-animation="venue" viewBox="0 0 600 384" role="img"
+                    aria-label="講演会、展示会、ワークショップの3つの教室を在校生が自由に行き来する会場の平面図">
                     <defs>
                         <g id="pp">
                             <circle cx="0" cy="-7" r="4" />
@@ -176,9 +177,9 @@
                         </g>
                     </defs>
                     <rect class="vn-corr" x="8" y="152" width="584" height="56" />
-                    <rect class="vn-room" x="18" y="16" width="264" height="136" />
-                    <rect class="vn-room" x="318" y="16" width="264" height="136" />
-                    <rect class="vn-room" x="18" y="208" width="264" height="136" />
+                    <rect class="vn-room vn-room--talk" x="18" y="16" width="264" height="136" />
+                    <rect class="vn-room vn-room--exhibition" x="318" y="16" width="264" height="136" />
+                    <rect class="vn-room vn-room--workshop" x="18" y="208" width="264" height="136" />
                     <g class="vn-prop">
                         <rect x="186" y="34" width="80" height="50" />
                         <rect x="466" y="30" width="46" height="54" />
@@ -201,21 +202,21 @@
                     <text class="vn-key" x="336" y="60">EXHIBITION</text>
                     <text class="vn-name" x="36" y="236">ワークショップ</text>
                     <text class="vn-key" x="36" y="252">WORKSHOP</text>
-                    <g class="vn-alum">
+                    <g class="vn-alum vn-participants">
                         <use href="#pp" x="62" y="112" />
                         <use href="#pp" x="336" y="112" />
                         <use href="#pp" x="62" y="316" />
                     </g>
-                    <g class="vn-you">
+                    <g class="vn-you vn-participants">
                         <use href="#pp" x="204" y="120" />
                         <use href="#pp" x="232" y="132" />
                         <use href="#pp" x="516" y="122" />
                         <use href="#pp" x="544" y="134" />
                         <use href="#pp" x="212" y="318" />
-                        <use href="#pp" x="86" y="190" />
-                        <use href="#pp" x="266" y="186" />
-                        <use href="#pp" x="356" y="192" />
-                        <use href="#pp" x="556" y="188" />
+                        <use class="vn-walker vn-walker--1" href="#pp" x="86" y="190" />
+                        <use class="vn-walker vn-walker--2" href="#pp" x="266" y="186" />
+                        <use class="vn-walker vn-walker--3" href="#pp" x="356" y="192" />
+                        <use class="vn-walker vn-walker--4" href="#pp" x="556" y="188" />
                     </g>
                     <g class="vn-alum">
                         <use href="#pp" x="394" y="270" />
@@ -304,7 +305,7 @@
                 </div>
                 <div>
                     <div class="figure">
-                        <svg class="mixfig" viewBox="92 0 368 168" role="img"
+                        <svg class="mixfig" data-scroll-animation="mix" viewBox="92 0 368 168" role="img"
                             aria-label="大きな「研究トピック」の円と、小さな「専攻分野」の円を足したものが発表内容">
                             <circle class="mf-main" cx="182" cy="84" r="80" />
                             <text class="mf-tag" x="182" y="68">MAIN</text>
@@ -352,7 +353,8 @@
                         講演で使ったスライドは、全体または要所を印刷していただき、展示室にも掲示する予定です。
                     </p>
                     <div class="figure">
-                        <svg viewBox="0 0 340 96" role="img" aria-label="簡素なスライドと、図表を入れたスライドの作例">
+                        <svg data-scroll-animation="slides" viewBox="0 0 340 96" role="img"
+                            aria-label="簡素なスライドと、図表を入れたスライドの作例">
                             <rect class="of-sheet" x="8" y="6" width="150" height="84" />
                             <rect class="of-block" x="22" y="22" width="64" height="9" />
                             <rect class="of-block" x="22" y="44" width="112" height="5" />
@@ -376,7 +378,8 @@
                     <h3>ポスターを使う場合</h3>
                     <p>各自で印刷してご持参ください。印刷したスライドを並べる形でも構いません。印刷が難しい場合はご相談ください。</p>
                     <div class="figure">
-                        <svg viewBox="0 0 340 96" role="img" aria-label="縦長のポスター2種。印刷したスライドを並べたものと、大判ポスターの作例">
+                        <svg data-scroll-animation="posters" viewBox="0 0 340 96" role="img"
+                            aria-label="縦長のポスター2種。印刷したスライドを並べたものと、大判ポスターの作例">
                             <rect class="of-sheet" x="94" y="3" width="64" height="90" />
                             <rect class="of-block" x="100" y="10" width="52" height="6" />
                             <g class="of-mini">
@@ -412,7 +415,8 @@
                     <h3>実物を見せる場合</h3>
                     <p>実物を持ち込んでの実演もできます。実物については、ご自身で保管・管理をお願いいたします。</p>
                     <div class="figure">
-                        <svg viewBox="0 0 340 96" role="img" aria-label="机に置いた実物を見てもらう様子と、動かして実演する様子">
+                        <svg data-scroll-animation="demonstration" viewBox="0 0 340 96" role="img"
+                            aria-label="机に置いた実物を見てもらう様子と、動かして実演する様子">
                             <rect class="of-sheet" x="8" y="6" width="150" height="84" />
                             <rect class="of-block" x="46" y="46" width="42" height="26" />
                             <circle class="of-block" cx="118" cy="42" r="9" />
