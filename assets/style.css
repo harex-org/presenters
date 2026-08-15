@@ -1011,6 +1011,37 @@ ul.plain li {
     stroke-linecap: round;
 }
 
+/* 資料テンプレの短冊。最小情報を読みやすく並べる */
+.prep-templates>article {
+    background: var(--tint);
+    padding: 18px 16px;
+}
+
+.prep-templates h3 {
+    margin-bottom: 8px;
+}
+
+.prep-templates p {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.template-list {
+    margin: 0;
+    padding-left: 1.3em;
+}
+
+.template-list li {
+    margin-bottom: 7px;
+    font-size: 13.5px;
+    line-height: 1.75;
+}
+
+.template-list li:last-child {
+    margin-bottom: 0;
+}
+
 /* 資料作例は用紙、内容、図表の順に静かに立ち上げる */
 [data-scroll-animation="slides"].is-revealed .of-sheet,
 [data-scroll-animation="posters"].is-revealed .of-sheet,
@@ -1586,6 +1617,10 @@ footer.site .links a {
     .cols.c3>article,
     .cols.c2>article {
         border-bottom: 1px solid var(--line);
+    }
+
+    .prep-templates>article {
+        padding: 22px 20px;
     }
 
     /* 本文の左に見出し、右に図版 */
