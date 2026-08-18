@@ -497,11 +497,109 @@ h3 {
     height: auto;
 }
 
+.poster-sample-link {
+    display: block;
+}
+
+.poster-sample {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    background: #fff;
+}
+
 .caption {
     margin-top: 10px;
     font-size: 12.5px;
     color: var(--sub);
     line-height: 1.7;
+}
+
+.sample-collection,
+.template-collection {
+    margin-top: 28px;
+    border: 1px solid var(--line);
+    background: var(--tint);
+}
+
+.sample-collection summary,
+.template-collection summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 18px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+}
+
+.sample-collection summary::-webkit-details-marker,
+.template-collection summary::-webkit-details-marker {
+    display: none;
+}
+
+.sample-collection summary::after,
+.template-collection summary::after {
+    content: "＋";
+    margin-left: auto;
+    color: var(--sub);
+    font-weight: 400;
+}
+
+.sample-collection[open] summary::after,
+.template-collection[open] summary::after {
+    content: "−";
+}
+
+.sample-collection__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    gap: 18px;
+    align-items: center;
+    padding: 0 18px 18px;
+}
+
+.sample-collection__body > .note {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.template-collection__body {
+    padding: 0 18px 18px;
+}
+
+.sample-collection__image-link {
+    display: block;
+}
+
+.sample-collection__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    background: #fff;
+}
+
+.sample-collection__notes ul {
+    margin: 10px 0 0;
+    padding-left: 1.1em;
+}
+
+.sample-collection__notes li {
+    margin: 0 0 .75em;
+    line-height: 1.8;
+}
+
+.sample-collection__notes li:last-child {
+    margin-bottom: 0;
+}
+
+.sample-collection__hint {
+    margin-bottom: 0;
+    font-size: 13px;
+    color: var(--sub);
 }
 
 /* 補足の一文（帯にしない） */
@@ -1011,6 +1109,37 @@ ul.plain li {
     stroke-linecap: round;
 }
 
+/* 資料テンプレの短冊。最小情報を読みやすく並べる */
+.prep-templates>article {
+    background: var(--tint);
+    padding: 18px 16px;
+}
+
+.prep-templates h3 {
+    margin-bottom: 8px;
+}
+
+.prep-templates p {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.template-list {
+    margin: 0;
+    padding-left: 1.3em;
+}
+
+.template-list li {
+    margin-bottom: 7px;
+    font-size: 13.5px;
+    line-height: 1.75;
+}
+
+.template-list li:last-child {
+    margin-bottom: 0;
+}
+
 /* 資料作例は用紙、内容、図表の順に静かに立ち上げる */
 [data-scroll-animation="slides"].is-revealed .of-sheet,
 [data-scroll-animation="posters"].is-revealed .of-sheet,
@@ -1323,6 +1452,12 @@ ul.plain li {
     line-height: 1.9;
 }
 
+@media (max-width: 840px) {
+    .sample-collection__body {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ==========================================================================
    締めと連絡先
    ========================================================================== */
@@ -1586,6 +1721,10 @@ footer.site .links a {
     .cols.c3>article,
     .cols.c2>article {
         border-bottom: 1px solid var(--line);
+    }
+
+    .prep-templates>article {
+        padding: 22px 20px;
     }
 
     /* 本文の左に見出し、右に図版 */
