@@ -497,11 +497,109 @@ h3 {
     height: auto;
 }
 
+.poster-sample-link {
+    display: block;
+}
+
+.poster-sample {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    background: #fff;
+}
+
 .caption {
     margin-top: 10px;
     font-size: 12.5px;
     color: var(--sub);
     line-height: 1.7;
+}
+
+.sample-collection,
+.template-collection {
+    margin-top: 28px;
+    border: 1px solid var(--line);
+    background: var(--tint);
+}
+
+.sample-collection summary,
+.template-collection summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 18px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+}
+
+.sample-collection summary::-webkit-details-marker,
+.template-collection summary::-webkit-details-marker {
+    display: none;
+}
+
+.sample-collection summary::after,
+.template-collection summary::after {
+    content: "＋";
+    margin-left: auto;
+    color: var(--sub);
+    font-weight: 400;
+}
+
+.sample-collection[open] summary::after,
+.template-collection[open] summary::after {
+    content: "−";
+}
+
+.sample-collection__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    gap: 18px;
+    align-items: center;
+    padding: 0 18px 18px;
+}
+
+.sample-collection__body > .note {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.template-collection__body {
+    padding: 0 18px 18px;
+}
+
+.sample-collection__image-link {
+    display: block;
+}
+
+.sample-collection__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    background: #fff;
+}
+
+.sample-collection__notes ul {
+    margin: 10px 0 0;
+    padding-left: 1.1em;
+}
+
+.sample-collection__notes li {
+    margin: 0 0 .75em;
+    line-height: 1.8;
+}
+
+.sample-collection__notes li:last-child {
+    margin-bottom: 0;
+}
+
+.sample-collection__hint {
+    margin-bottom: 0;
+    font-size: 13px;
+    color: var(--sub);
 }
 
 /* 補足の一文（帯にしない） */
@@ -1352,6 +1450,12 @@ ul.plain li {
     padding: 0 0 20px;
     font-size: 15px;
     line-height: 1.9;
+}
+
+@media (max-width: 840px) {
+    .sample-collection__body {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ==========================================================================
